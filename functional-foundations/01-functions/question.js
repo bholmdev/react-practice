@@ -7,19 +7,19 @@ const saySomethingAndReact = (msg = 'you forgot to submit a message') => {
     return (reaction) => {
         reaction();
     };
-};
+}
 
 // add the inputs here
 saySomethingAndReact(message)(smoothReaction);
 
 const greetUser = (userName) => {
     console.log("Hi there, " + userName);
-};
+}
 greetUser("Sam");
 
 const greetUser2 = (userName, msg = "Hi there, ") => {
     console.log(msg + userName);
-};
+}
 greetUser2("Sam");
 greetUser2("Sam?", "Where are you ");
 
@@ -28,13 +28,13 @@ const logMessage = (msg) => {
 }
 const greetUser3 = (func, userName) => {
     func("Hi there, " + userName)
-};
+}
 greetUser3(logMessage, "Sam");
 
 // anyonymous function
 const greetUser4 = (func, userName) => {
     func("Hi there, " + userName);
-};
+}
 greetUser4((msg) => console.log(msg), "Sam");
 
 const sum = (a, b) => a + b;
@@ -51,4 +51,4 @@ logConfused("What the heck");
 const logExcited = logMessage2("!!!!!!");
 logExcited("Actually, this is pretty cool");
 logMessage2("??!?")("What the heck");
-logMessage2("!!!!!!")("This is pretty cool")
+logMessage2("!!!!!!")("This is pretty cool");
